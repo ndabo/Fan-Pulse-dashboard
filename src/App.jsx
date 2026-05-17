@@ -253,6 +253,96 @@ export default function App() {
           </div>
         )}
       </div>
+
+      {/* ── Info Footer ── */}
+      <div style={{
+        borderTop: '1px solid var(--border)',
+        background: 'var(--surface)',
+        padding: '48px 32px 64px',
+      }}>
+        <div style={{
+          maxWidth: 1100,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: 32,
+        }}>
+
+          {/* Testing Instructions */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+              <span style={{ fontSize: 18 }}>🧪</span>
+              <h2 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 16,
+                fontWeight: 800,
+                color: 'var(--text-primary)',
+                letterSpacing: '-0.02em',
+              }}>Testing Instructions</h2>
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 13,
+              color: 'var(--text-secondary)',
+              lineHeight: 1.8,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 10,
+            }}>
+              <p>No sign-up or credentials needed — the API key is already baked in.</p>
+              <ol style={{ paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <li>The dropdown at the top auto-loads the <strong style={{ color: 'var(--text-primary)' }}>20 most recent Lakers videos</strong>.</li>
+                <li>Select any video — analysis runs automatically (takes ~2 seconds).</li>
+                <li>Explore <strong style={{ color: 'var(--text-primary)' }}>Fan Sentiment</strong> for positive/neutral/negative breakdown.</li>
+                <li>Check <strong style={{ color: 'var(--text-primary)' }}>Best Time to Post</strong> for the day-of-week recommendation.</li>
+                <li>Review <strong style={{ color: 'var(--text-primary)' }}>Estimated Age Breakdown</strong> — hover bars for targeting tips.</li>
+                <li>Filter <strong style={{ color: 'var(--text-primary)' }}>Top Comments</strong> by sentiment using the tabs.</li>
+              </ol>
+              <p style={{
+                marginTop: 4,
+                fontFamily: 'var(--font-mono)',
+                fontSize: 11,
+                color: 'var(--text-muted)',
+              }}>
+                Free YouTube API tier · ~2 quota units per analysis · 10,000 units/day limit
+              </p>
+            </div>
+          </div>
+
+          {/* Roadmap */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+              <span style={{ fontSize: 18 }}>🗺️</span>
+              <h2 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 16,
+                fontWeight: 800,
+                color: 'var(--text-primary)',
+                letterSpacing: '-0.02em',
+              }}>Roadmap</h2>
+            </div>
+            <div style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 13,
+              color: 'var(--text-secondary)',
+              lineHeight: 1.8,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 8,
+            }}>
+              <p>The current tool is a strong foundation for a real fan intelligence product. With more time:</p>
+              <ul style={{ paddingLeft: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <li><strong style={{ color: 'var(--text-primary)' }}>Real NLP sentiment</strong> — swap keyword heuristics for a Claude API call to score comments with nuance (sarcasm, slang, context).</li>
+                <li><strong style={{ color: 'var(--text-primary)' }}>Multi-video trends</strong> — track sentiment and engagement across all recent videos to surface what content formats fans respond to most.</li>
+                <li><strong style={{ color: 'var(--text-primary)' }}>Verified demographics</strong> — integrate YouTube Analytics API (OAuth) to replace estimated age groups with real audience data.</li>
+                <li><strong style={{ color: 'var(--text-primary)' }}>Stakeholder exports</strong> — one-click PDF/PowerPoint summary with charts and recommendations for marketing presentations.</li>
+                <li><strong style={{ color: 'var(--text-primary)' }}>New video alerts</strong> — automated weekly digest emailed to the marketing team when a new video is posted and analysed.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 }
